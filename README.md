@@ -1,3 +1,50 @@
+# Goal
+
+Build an application using React that interacts with the [Newton API](https://github.com/aunyks/newton-api).
+
+# API Summary
+
+GET request to `https://newton.now.sh/:operation/:expression` yields result of `operation` on `equation`.
+
+# Approach
+
+- Design document detailing
+- Implement
+- UI
+
+# Design Document
+
+## Components
+
+- `App` - top-level component with providers, `Head`, and top-level application components
+- `Head` - manage html `head` using `react-helmet`
+- `Heading` - page heading
+- `Main` - top level app component, contains global state
+- `InitialForm` - form to enter initial equation and operation. Disappears and is replaced by `Reset` button upon confirmation
+  - `form`
+
+    - `input` - equation
+    - `OperationSelector` - operation
+    - `button` - submit
+
+    - `Reset` - Clear history and render `InitialForm` to start over
+      - `button`
+    - `Operations` - Container that maps over all
+      - `Operation` - Takes `equation` and `operation` to make a request to API
+        - `Loading` - while loading request
+          - `material-ui/core/CircularProgress`
+        - `Rebase` - delete this operation the tail of the history by deleting all following entries
+          - `button`
+        - `OperationForm` - Make operations to this equation to continue making history entries
+          - `OperationSelector` - operation
+          - `button` - submit
+
+* Reusable components
+  - `Loading` - spinner indicating loading status for async calls
+  - `OperationSelector` - `select` element containing all valid `option`s for operations
+
+# Bootstrapping
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
