@@ -7,7 +7,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
-    "react-scripts": "3.0.1"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -33,7 +33,7 @@
   "devDependencies": {
     "@gonimbly/eslint-config": "^3.0.0",
     "babel-eslint": "^7.2.3",
-    "eslint": "^4.19.1",
+    "eslint": "^9.32.0",
     "eslint-plugin-flowtype": "^2.50.3",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^5.1.1",
